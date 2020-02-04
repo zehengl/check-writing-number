@@ -16,18 +16,20 @@
             type="button"
             v-if="!inputDisabled"
             v-on:click="amount = ''"
-          >
-            Clear
-          </button>
+          >Clear</button>
         </div>
       </form>
     </div>
     <div class="flex mb-4" role="alert" v-if="amount">
-      <p
-        class="w-1/3 ml-auto mr-auto bg-green-500 border-transparent border-4 py-1 px-2"
+      <div
+        v-if="inputDisabled"
+        class="w-1/3 ml-auto mr-auto bg-gray-500 border-transparent border-4 py-1 px-2"
       >
-        writes as: {{ convert(amount) }}
-      </p>
+        <p>{{ convert(amount) }}</p>
+      </div>
+      <div v-else class="w-1/3 ml-auto mr-auto bg-blue-500 border-transparent border-4 py-1 px-2">
+        <p>{{ convert(amount) }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -36,12 +38,125 @@
 export default {
   name: "CheckWritingNumberApp",
   props: {
-    amount: String,
-    inputDisabled: Boolean
+    inputDisabled: Boolean,
+    initAmount: String
+  },
+  data: function() {
+    return { amount: this.initAmount };
   },
   methods: {
     convert: str => {
-      return str;
+      let notANumber = "Oops! This is not a number.";
+
+      let units = [
+        "",
+        "Thousand",
+        "Million",
+        "Billion",
+        "Trillion",
+        "Quadrillion",
+        "Quintillion",
+        "Sextillion",
+        "Septillion"
+      ];
+
+      let matches = [
+        "Zero",
+        "One",
+        "Two",
+        "Three",
+        "Four",
+        "Five",
+        "Six",
+        "Seven",
+        "Eight",
+        "Nine",
+        "Ten",
+        "Eleven",
+        "Twelve",
+        "Thirteen",
+        "Fourteen",
+        "Fifteen",
+        "Sixteen",
+        "Seventeen",
+        "Eighteen",
+        "Nineteen"
+      ];
+
+      let tens = [
+        "Twenty",
+        "Thirty",
+        "Forty",
+        "Fifty",
+        "Sixty",
+        "Seventy",
+        "Eighty",
+        "Ninety"
+      ];
+
+      let chunkArray = arr => {
+        let index = arr.length;
+        let temp = [];
+        for (; index >= 0; index -= 3) {
+          let chunk = arr.slice(index - 3 >= 0 ? index - 3 : 0, index);
+          if (chunk) {
+            temp.push(chunk);
+          }
+        }
+        return temp;
+      };
+
+      let chunkToWords = chunk => {
+        let value = parseInt(chunk);
+        if (value < 20) return matches[value];
+        let digit = value % 10;
+        if (value < 100)
+          return tens[~~(value / 10) - 2] + (digit ? " " + matches[digit] : "");
+        if (value < 1000)
+          return (
+            matches[~~(value / 100)] +
+            " Hundred" +
+            (~~(value / 100) > 1 ? "s" : "") +
+            (value % 100 == 0 ? "" : " " + chunkToWords(value % 100))
+          );
+      };
+
+      let translate = chunks => {
+        return chunks
+          .map((chunk, i) => {
+            if (+chunk === 0 && i > 0) return "";
+            return chunkToWords(chunk)
+              ? chunkToWords(chunk) +
+                  " " +
+                  units[i] +
+                  (+chunk > 1 && i > 0 ? "s" : "")
+              : "";
+          })
+          .reverse()
+          .filter(Boolean)
+          .join(" and ");
+      };
+
+      let parts = str.split(".");
+
+      if (parts.length > 2) return notANumber;
+      else if (parts.length === 1) {
+        let value = +parts[0];
+        return value
+          ? translate(chunkArray(parts[0])) + " and 00/100 Dollar"
+          : notANumber;
+      } else {
+        let [integers, decimals] = parts;
+        let valueIntegers = integers ? +integers : 0;
+        let valueDecimals = decimals ? +decimals : 0;
+        let valid = !isNaN(valueIntegers) && !isNaN(valueDecimals);
+        return valid
+          ? translate(chunkArray(integers)) +
+              " and " +
+              (decimals ? decimals.slice(0, 2) : "00") +
+              "/100 Dollar"
+          : notANumber;
+      }
     }
   }
 };
