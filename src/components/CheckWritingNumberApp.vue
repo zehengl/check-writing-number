@@ -21,6 +21,13 @@
           >
             Clear
           </button>
+          <button
+            class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 focus:outline-none"
+            v-clipboard:copy="convert(amount)"
+            v-if="!inputDisabled && amount"
+          >
+            Copy
+          </button>
         </div>
       </div>
     </div>
@@ -138,7 +145,7 @@ export default {
             if (+chunk === 0) return "";
             return chunkToWords(chunk)
               ? chunkToWords(chunk) +
-                  " " +
+                  (i === 0 ? "" : " ") +
                   (i < units.length ? units[i] : `[1000^${i}]`) +
                   (+chunk > 1 && i > 0 ? "s" : "")
               : "";
