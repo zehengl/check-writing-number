@@ -1,5 +1,9 @@
 # check-writing-number
 
+[![Build Status](https://travis-ci.org/zehengl/check-writing-number.svg?branch=master)](https://travis-ci.org/zehengl/check-writing-number)
+
+A Vue App to convert \$ to a check writing number
+
 ## Project setup
 
 ```
