@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "arcticicestudio.nord-visual-studio-code",
+    "CoenraadS.bracket-pair-colorizer",
+    "DavidAnson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "ms-vscode.wordcount",
+    "octref.vetur",
+    "oderwat.indent-rainbow",
+    "tyriar.sort-lines",
+    "vscode-icons-team.vscode-icons"
+  ]
+}
