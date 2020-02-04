@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex mb-4">
-      <form class="w-1/3 ml-auto mr-auto">
+      <div class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 ml-auto mr-auto">
         <div class="flex items-center border-b border-b-2 border-blue-500 py-2">
           <input
             class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
@@ -18,18 +18,23 @@
             type="button"
             v-if="!inputDisabled"
             v-on:click="clearAmount()"
-          >Clear</button>
+          >
+            Clear
+          </button>
         </div>
-      </form>
+      </div>
     </div>
     <div class="flex mb-4" role="alert" v-if="amount">
       <div
         v-if="inputDisabled"
-        class="w-1/3 ml-auto mr-auto bg-gray-500 border-transparent border-4 py-1 px-2"
+        class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 ml-auto mr-auto bg-gray-500 border-transparent border-4 py-1 px-2"
       >
         <p>{{ convert(amount) }}</p>
       </div>
-      <div v-else class="w-1/3 ml-auto mr-auto bg-blue-500 border-transparent border-4 py-1 px-2">
+      <div
+        v-else
+        class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 ml-auto mr-auto bg-blue-500 border-transparent border-4 py-1 px-2"
+      >
         <p>{{ convert(amount) }}</p>
       </div>
     </div>
