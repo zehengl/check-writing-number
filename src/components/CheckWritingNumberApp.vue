@@ -111,7 +111,7 @@ export default {
         if (value < 20) return matches[value];
         let digit = value % 10;
         if (value < 100)
-          return tens[~~(value / 10) - 2] + (digit ? " " + matches[digit] : "");
+          return tens[~~(value / 10) - 2] + (digit ? "-" + matches[digit] : "");
         if (value < 1000)
           return (
             matches[~~(value / 100)] +
@@ -124,11 +124,11 @@ export default {
       let translate = chunks => {
         return chunks
           .map((chunk, i) => {
-            if (+chunk === 0 && i > 0) return "";
+            if (+chunk === 0) return "";
             return chunkToWords(chunk)
               ? chunkToWords(chunk) +
                   " " +
-                  units[i] +
+                  (i < units.length ? units[i] : `[1000^${i}]`) +
                   (+chunk > 1 && i > 0 ? "s" : "")
               : "";
           })
@@ -142,7 +142,7 @@ export default {
       if (parts.length > 2) return notANumber;
       else if (parts.length === 1) {
         let value = +parts[0];
-        return value
+        return !isNaN(value)
           ? translate(chunkArray(parts[0])) + " and 00/100 Dollar"
           : notANumber;
       } else {
@@ -150,12 +150,15 @@ export default {
         let valueIntegers = integers ? +integers : 0;
         let valueDecimals = decimals ? +decimals : 0;
         let valid = !isNaN(valueIntegers) && !isNaN(valueDecimals);
-        return valid
-          ? translate(chunkArray(integers)) +
-              " and " +
-              (decimals ? decimals.slice(0, 2) : "00") +
-              "/100 Dollar"
-          : notANumber;
+
+        let strIntegers = translate(chunkArray(integers));
+        if (strIntegers) {
+          strIntegers += " and ";
+        }
+
+        let strDecimals = decimals ? decimals.slice(0, 2) : "00";
+
+        return valid ? strIntegers + strDecimals + "/100 Dollar" : notANumber;
       }
     }
   }
