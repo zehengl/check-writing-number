@@ -9,13 +9,15 @@
             placeholder="Enter the amount of money"
             v-bind:disabled="inputDisabled"
             v-model="amount"
+            ref="inputAmount"
+            @keydown.esc="clearAmount()"
             aria-label="Amount"
           />
           <button
             class="flex-shrink-0 border-transparent border-4 text-gray-500 hover:text-gray-800 text-sm py-1 px-2 focus:outline-none"
             type="button"
             v-if="!inputDisabled"
-            v-on:click="amount = ''"
+            v-on:click="clearAmount()"
           >Clear</button>
         </div>
       </form>
@@ -45,6 +47,10 @@ export default {
     return { amount: this.initAmount };
   },
   methods: {
+    clearAmount: function() {
+      this.amount = "";
+      this.$refs.inputAmount.focus();
+    },
     convert: str => {
       let notANumber = "Oops! This is not a number.";
 
