@@ -13,7 +13,7 @@ let units = [
 ];
 
 let matches = [
-  "Zero",
+  "",
   "One",
   "Two",
   "Three",
@@ -75,7 +75,6 @@ let chunkToWords = chunk => {
 let translate = chunks => {
   return chunks
     .map((chunk, i) => {
-      if (+chunk === 0) return "";
       return chunkToWords(chunk)
         ? chunkToWords(chunk) +
             (i === 0 ? "" : " ") +
@@ -93,9 +92,11 @@ let convert = str => {
   if (parts.length > 2) return notANumber;
   else if (parts.length === 1) {
     let value = +parts[0];
-    return !isNaN(value)
-      ? translate(chunkArray(parts[0])) + " and 00/100 Dollar"
-      : notANumber;
+    if (isNaN(value)) return notANumber;
+    else {
+      let strIntegers = translate(chunkArray(parts[0]));
+      return strIntegers + (strIntegers ? " and " : "") + "00/100 Dollar";
+    }
   } else {
     let [integers, decimals] = parts;
     let valueIntegers = integers ? +integers : 0;
@@ -107,7 +108,7 @@ let convert = str => {
       strIntegers += " and ";
     }
 
-    let strDecimals = decimals ? decimals.slice(0, 2) : "00";
+    let strDecimals = decimals ? decimals.slice(0, 2).padEnd(2, "0") : "00";
 
     return valid ? strIntegers + strDecimals + "/100 Dollar" : notANumber;
   }
