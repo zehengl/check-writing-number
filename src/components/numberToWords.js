@@ -1,5 +1,6 @@
 let notANumber = "Oops! This is not a number.";
 
+// See https://en.wikipedia.org/wiki/Names_of_large_numbers
 let units = [
   "",
   "Thousand",
@@ -9,7 +10,20 @@ let units = [
   "Quadrillion",
   "Quintillion",
   "Sextillion",
-  "Septillion"
+  "Septillion",
+  "Octillion",
+  "Nonillion",
+  "Decillion",
+  "Undecillion",
+  "Duodecillion",
+  "Tredecillion",
+  "Quattuordecillion",
+  "Quindecillion",
+  "Sexdecillion",
+  "Septendecillion",
+  "Octodecillion",
+  "Novemdecillion",
+  "Vigintillion"
 ];
 
 let matches = [
