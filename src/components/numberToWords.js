@@ -68,7 +68,6 @@ let chunkToWords = chunk => {
     return (
       matches[~~(value / 100)] +
       " Hundred" +
-      (~~(value / 100) > 1 ? "s" : "") +
       (value % 100 == 0 ? "" : " " + chunkToWords(value % 100))
     );
 };
@@ -80,13 +79,12 @@ let translate = chunks => {
       return chunkToWords(chunk)
         ? chunkToWords(chunk) +
             (i === 0 ? "" : " ") +
-            (i < units.length ? units[i] : `[1000^${i}]`) +
-            (+chunk > 1 && i > 0 ? "s" : "")
+            (i < units.length ? units[i] : `[1000^${i}]`)
         : "";
     })
     .reverse()
     .filter(Boolean)
-    .join(" and ");
+    .join(" ");
 };
 
 let convert = str => {
