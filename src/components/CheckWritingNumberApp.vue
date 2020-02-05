@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex mb-4">
+    <div class="flex mb-1">
       <div class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 ml-auto mr-auto">
         <div class="flex items-center border-b border-b-2 border-blue-500 py-2">
           <input
@@ -14,19 +14,19 @@
             aria-label="Amount"
           />
           <button
+            class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 focus:outline-none"
+            v-clipboard:copy="convert(amount)"
+            v-if="!inputDisabled && amount"
+          >
+            Copy
+          </button>
+          <button
             class="flex-shrink-0 border-transparent border-4 text-gray-500 hover:text-gray-800 text-sm py-1 px-2 focus:outline-none"
             type="button"
             v-if="!inputDisabled"
             v-on:click="clearAmount()"
           >
             Clear
-          </button>
-          <button
-            class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 focus:outline-none"
-            v-clipboard:copy="convert(amount)"
-            v-if="!inputDisabled && amount"
-          >
-            Copy
           </button>
         </div>
       </div>
