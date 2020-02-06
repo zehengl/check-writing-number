@@ -128,4 +128,4 @@ let convert = str => {
   }
 };
 
-export { convert };
+module.exports = { convert, chunkArray, chunkToWords, matches, tens };
