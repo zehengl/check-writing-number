@@ -1,0 +1,16 @@
+{
+  "name": "Check Writing Number",
+  "short_name": "Check Writing Number",
+  "scope": "/check-writing-number/",
+  "start_url": "/check-writing-number/index.html",
+  "background_color": "#ffffff",
+  "theme_color": "#14854F",
+  "display": "minimal-ui",
+  "icons": [
+    {
+      "src": "logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
