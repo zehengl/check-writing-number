@@ -1,3 +1,7 @@
+<div align="center">
+    <img src="https://cdn3.iconfinder.com/data/icons/finance-152/64/42-512.png" alt="logo" height="196">
+</div>
+
 # check-writing-number
 
 [![Build Status](https://travis-ci.org/zehengl/check-writing-number.svg?branch=master)](https://travis-ci.org/zehengl/check-writing-number)
@@ -32,6 +36,15 @@ npm run lint
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+<hr>
+
+<sup>
+
 ## Credits
 
-- [Icon](https://www.iconfinder.com/icons/3319643/banking_cash_laptop_online_out_icon) by [Design Circle](https://www.iconfinder.com/oxy-Nation)
+- [Logo][1] by [Design Circle][2]
+
+[1]: https://www.iconfinder.com/icons/3319643/banking_cash_laptop_online_out_icon
+[2]: https://www.iconfinder.com/oxy-Nation
+
+</sup>
