@@ -8,7 +8,7 @@ describe("CheckWritingNumberApp", () => {
         inputDisabled: true
       }
     });
-    expect(wrapper.isVueInstance()).toBeTruthy();
+    expect(wrapper.exists()).toBeTruthy();
     expect(wrapper.props().inputDisabled).toBeTruthy();
   });
 });
