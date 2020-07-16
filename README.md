@@ -4,7 +4,7 @@
 
 # check-writing-number
 
-[![Build Status](https://travis-ci.org/zehengl/check-writing-number.svg?branch=master)](https://travis-ci.org/zehengl/check-writing-number)
+![GitHub Pages Build and Deploy](https://github.com/zehengl/check-writing-number/workflows/GitHub%20Pages%20Build%20and%20Deploy/badge.svg?branch=master)
 
 A Vue App to convert \$ to a check writing number
 
