@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "tailwindcss": "^1.6.1",
+    "tailwindcss": "^1.6.2",
     "vue": "^2.6.11",
     "vue-clipboard2": "^0.3.1",
-    "vue-feather-icons": "^5.0.0"
+    "vue-feather-icons": "^5.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.6",
