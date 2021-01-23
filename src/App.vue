@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="flex-col h-screen justify-between">
-    <header class="h-10"></header>
+  <div id="app" class="flex flex-col h-screen justify-between">
+    <header class="h-10 bg-yellow-300"></header>
     <div class="mt-8 mb-4 py-1">
       <img class="w-1/8 mx-auto" alt="logo" src="./assets/logo.png" />
     </div>
@@ -27,8 +27,8 @@
         />
       </div>
     </main>
-    <footer class="h-10">
-      <p class="p-4 text-center">
+    <footer class="bg-gray-300">
+      <p class="p-4 text-center align-top">
         Version: <strong>{{ version }}</strong>
       </p>
     </footer>
