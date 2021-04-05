@@ -15,7 +15,7 @@
     "vue-feather-icons": "^5.1.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0.4",
+    "@tailwindcss/postcss7-compat": "^2.1.0",
     "@vue/cli-plugin-babel": "^4.5.12",
     "@vue/cli-plugin-eslint": "^4.5.12",
     "@vue/cli-service": "^4.5.12",
@@ -25,11 +25,11 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "eslint": "^7.23.0",
-    "eslint-plugin-jest": "^24.3.3",
+    "eslint-plugin-jest": "^24.3.4",
     "eslint-plugin-vue": "^7.8.0",
     "jest": "^26.6.3",
     "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.0",
     "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.12"
   },
