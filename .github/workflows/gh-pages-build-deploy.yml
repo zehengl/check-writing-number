@@ -19,6 +19,8 @@ jobs:
         run: npm run test
       - name: Build 🔧
         run: npm run build
+        env:
+          BASE_URL: check-writing-number
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
