@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://cdn3.iconfinder.com/data/icons/finance-152/64/42-512.png" alt="logo" height="196">
+    <img src="https://raw.githubusercontent.com/zehengl/check-writing-number/main/public/logo-512.png" alt="logo" height="196">
 </div>
 
 # check-writing-number
