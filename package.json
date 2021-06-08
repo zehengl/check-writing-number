@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.14.0",
-    "vue": "^2.6.13",
+    "vue": "^2.6.14",
     "vue-clipboard2": "^0.3.1",
     "vue-feather-icons": "^5.1.0"
   },
@@ -31,7 +31,7 @@
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
     "vue-jest": "^3.0.7",
-    "vue-template-compiler": "^2.6.13"
+    "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
     "root": true,
