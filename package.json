@@ -28,7 +28,7 @@
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-vue": "^7.10.0",
     "jest": "^27.0.4",
-    "postcss": "^7.0.35",
+    "postcss": "^7.0.36",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.4",
     "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.14"
