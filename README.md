@@ -44,15 +44,9 @@ npm run test
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-<hr>
-
-<sup>
-
 ## Credits
 
 - [Logo][1] by [Design Circle][2]
-
-</sup>
 
 [1]: https://www.iconfinder.com/icons/3319643/banking_cash_laptop_online_out_icon
 [2]: https://www.iconfinder.com/oxy-Nation
