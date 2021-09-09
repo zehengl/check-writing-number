@@ -9,13 +9,13 @@
     "test": "jest"
   },
   "dependencies": {
-    "core-js": "^3.17.2",
+    "core-js": "^3.17.3",
     "vue": "^2.6.14",
     "vue-clipboard2": "^0.3.1",
     "vue-feather-icons": "^5.1.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.2.10",
+    "@tailwindcss/postcss7-compat": "^2.2.14",
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-plugin-eslint": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
@@ -29,7 +29,7 @@
     "eslint-plugin-vue": "^7.17.0",
     "jest": "^27.1.1",
     "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.10",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14",
     "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.6.14"
   },
