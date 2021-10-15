@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",
-    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-plugin-babel": "^4.5.14",
     "@vue/cli-plugin-eslint": "^4.5.14",
     "@vue/cli-service": "^4.5.13",
     "@vue/test-utils": "^1.2.2",
