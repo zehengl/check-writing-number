@@ -1,10 +1,10 @@
 {
+  "editor.minimap.enabled": false,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "workbench.colorTheme": "Oceanic Next (dimmed bg)",
+  "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "vscode-icons",
   "workbench.productIconTheme": "material-product-icons",
-  "editor.minimap.enabled": false,
-  "workbench.editor.enablePreview": false
 }
