@@ -1,5 +1,7 @@
 {
+  "editor.bracketPairColorization.enabled": true,
   "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": "active",
   "editor.minimap.enabled": false,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
