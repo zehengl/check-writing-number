@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: "16"
       - name: Install 📦
-        run: npm install
+        run: npm install --force
       - name: Lint 👓
         run: npm run lint
       - name: Test 🧪
