@@ -4,9 +4,7 @@
 
 # check-writing-number
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5d34cdcd-04d3-4b36-9215-d0134a806116/deploy-status)](https://app.netlify.com/sites/check-writing-number/deploys)
 [![GitHub Pages Build and Deploy](https://github.com/zehengl/check-writing-number/actions/workflows/gh-pages-build-deploy.yml/badge.svg)](https://github.com/zehengl/check-writing-number/actions/workflows/gh-pages-build-deploy.yml)
-[![Depfu](https://badges.depfu.com/badges/2d5af771660dfce57560e1a019bea0a5/count.svg)](https://depfu.com/github/zehengl/check-writing-number?project_id=23909)
 
 A Vue App to convert \$ to a check writing number
 
