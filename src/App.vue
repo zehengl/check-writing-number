@@ -12,10 +12,10 @@
         v-on:click="showExample = !showExample"
       >
         <span class="flex items-center ml-auto mr-auto" v-if="showExample">
-          <MinusCircleIcon />Hide Examples
+          <MinusCircleIcon />&nbsp;Hide Examples
         </span>
         <span class="flex items-center ml-auto mr-auto" v-else>
-          <PlusCircleIcon />Expand Examples
+          <PlusCircleIcon />&nbsp;Expand Examples
         </span>
       </div>
       <div v-if="showExample">
