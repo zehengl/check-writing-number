@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.25.5",
-    "vue": "^2.7.11",
+    "vue": "^2.7.12",
     "vue-clipboard2": "^0.3.3",
     "vue-feather-icons": "^5.1.0"
   },
@@ -28,10 +28,10 @@
     "eslint-plugin-jest": "^24.7.0",
     "eslint-plugin-vue": "^7.20.0",
     "jest": "^27.5.1",
-    "postcss": "^8.4.17",
+    "postcss": "^8.4.18",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue-jest": "^3.0.7",
-    "vue-template-compiler": "^2.7.11"
+    "vue-template-compiler": "^2.7.12"
   },
   "eslintConfig": {
     "root": true,
