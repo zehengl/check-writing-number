@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "core-js": "^3.26.1",
+    "core-js": "^3.27.1",
     "vue": "^2.7.14",
     "vue-clipboard2": "^0.3.3",
     "vue-feather-icons": "^5.1.0"
@@ -28,7 +28,7 @@
     "eslint-plugin-jest": "^24.7.0",
     "eslint-plugin-vue": "^7.20.0",
     "jest": "^27.5.1",
-    "postcss": "^8.4.20",
+    "postcss": "^8.4.21",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.7.14"
