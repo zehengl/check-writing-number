@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://raw.githubusercontent.com/zehengl/check-writing-number/main/public/logo-512.png" alt="logo" height="196">
+    <img src="https://raw.githubusercontent.com/zehengl/check-writing-number/main/public/logo-512.png" alt="logo" height="128">
 </div>
 
 # check-writing-number
