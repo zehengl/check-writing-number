@@ -9,8 +9,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "core-js": "^3.33.0",
-    "vue": "^2.7.14",
+    "core-js": "^3.33.1",
+    "vue": "^2.7.15",
     "vue-clipboard2": "^0.3.3",
     "vue-feather-icons": "^5.1.0"
   },
@@ -31,7 +31,7 @@
     "postcss": "^8.4.31",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue-jest": "^3.0.7",
-    "vue-template-compiler": "^2.7.14"
+    "vue-template-compiler": "^2.7.15"
   },
   "eslintConfig": {
     "root": true,
