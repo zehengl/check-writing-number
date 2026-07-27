@@ -23,7 +23,10 @@ let units = [
   "Septendecillion",
   "Octodecillion",
   "Novemdecillion",
-  "Vigintillion"
+  "Vigintillion",
+  "Unvigintillion",
+  "Duovigintillion",
+  "Septuagintillion"
 ];
 
 let matches = [
