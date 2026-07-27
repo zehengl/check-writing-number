@@ -41,10 +41,3 @@ npm run test
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-## Credits
-
-- [Logo][1] by [Design Circle][2]
-
-[1]: https://www.iconfinder.com/icons/3319643/banking_cash_laptop_online_out_icon
-[2]: https://www.iconfinder.com/oxy-Nation
